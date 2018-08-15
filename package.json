@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "The restful API for Loan Trust",
   "main": "server.js",
-// <<<<<<< HEAD
-    // "scripts": {
-// =======
   "scripts": {
-// >>>>>>> 93c957cd5241ff87fc8f202481fa6c68af7a6b63
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Yanmife Ojo",
