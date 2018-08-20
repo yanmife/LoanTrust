@@ -12,7 +12,7 @@ const NextOfKin = {
     addNextOfKin: function(NextOfKin, callback) {
         const dt = new Date();
 
-        return db.query("INSERT INTO next_of_kin(firstName, surname, relationship, homeAddress, email) VALUES(?,?,?,?,?)", [NextOfKin.firstName, NextOfKin.surname, NextOfKin.relationship, NextOfKin.homeAddress, NextOfKin.email, dt], callback);
+        return db.query("INSERT INTO next_of_kin(firstName, surname, relationship, homeAddress, email, user, phoneNumber) VALUES(?,?,?,?,?,?,?)", [NextOfKin.firstName, NextOfKin.surname, NextOfKin.relationship, NextOfKin.homeAddress, NextOfKin.email, dt], callback);
     },
 
     deleteNextOfKin: function(id, callback) {
@@ -20,7 +20,7 @@ const NextOfKin = {
     },
 
     updateNextOfKin: function(id, NextOfKin, callback) {
-        return db.query("UPDATE next_of_kin SET firstName= ?, surname= ?, relationship= ?, homeAddress= ?, email= ? WHERE next_of_kin_id = ?", [NextOfKin.firstName, NextOfKin.surname, NextOfKin.relationship, NextOfKin.homeAddress, NextOfKin.email, id], callback);
+        return db.query("UPDATE next_of_kin SET firstName= ?, surname= ?, relationship= ?, homeAddress= ?, email= ?, phoneNumber= ?, user= ?, WHERE next_of_kin_id = ?", [NextOfKin.firstName, NextOfKin.surname, NextOfKin.relationship, NextOfKin.homeAddress, NextOfKin.email, NextOfKin.phoneNumber, NextOfKin.user, id], callback);
     }
 };
 
