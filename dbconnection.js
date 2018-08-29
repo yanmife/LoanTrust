@@ -7,13 +7,15 @@ const db = mysql.createConnection({
     password : "5f1436e6",
     database : "heroku_2e5ea325b630181"
     
-// });
+});
+
 //const db = mysql.createConnection({
   //  host : "localhost",
    // user : "root",
    // password : "",
    // database : "Loan-trust_db"
-});
+//});
+
 //Connect
 db.connect((err) => {
     if(err){
