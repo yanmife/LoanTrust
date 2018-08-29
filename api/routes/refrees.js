@@ -37,7 +37,7 @@ router.post('/', (req, res, next) => {
     });
 });
 
-router.get('/:detailsId', (req, res, next) => {
+router.get('/:refreeId', (req, res, next) => {
 
     // if(req.params.userId) {
 
@@ -58,7 +58,7 @@ router.get('/:detailsId', (req, res, next) => {
     
 });
 
-router.put('/:detailsId', (req, res, next) => {
+router.put('/:refreeId', (req, res, next) => {
     Refree.updateRefree(req.params.refreeId, req.body, function(err, rows){
         if (err) {
             const response = {"_meta":{"status_code": 417, "message": err}};
@@ -76,7 +76,7 @@ router.put('/:detailsId', (req, res, next) => {
     });
 });
 
-router.delete('/:detailsId', (req, res, next) => {
+router.delete('/:refreeId', (req, res, next) => {
     Refree.deleteRefree(req.params.refreeId, function(err, count) {
 
         if (err) {
