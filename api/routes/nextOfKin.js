@@ -38,11 +38,11 @@ router.post('/', (req, res, next) => {
     });
 });
 
-router.get('/:detailsId', (req, res, next) => {
+router.get('/:nextOfKinId', (req, res, next) => {
 
     // if(req.params.userId) {
 
-        NextOfKin.getNextOfKinByid(req.params.refreeId, function(err, rows){
+        NextOfKin.getNextOfKinByid(req.params.nextOfKinId, function(err, rows){
         if(err) {
             const response = {"_meta": {"status_code":404, "message": err}};
 
@@ -59,8 +59,8 @@ router.get('/:detailsId', (req, res, next) => {
     
 });
 
-router.put('/:detailsId', (req, res, next) => {
-    NextOfKin.updateNextOfKin(req.params.NextOfKinId, req.body, function(err, rows){
+router.put('/:nextOfKinId', (req, res, next) => {
+    NextOfKin.updateNextOfKin(req.params.nextOfKinId, req.body, function(err, rows){
         if (err) {
             const response = {"_meta":{"status_code": 417, "message": err}};
 
@@ -77,8 +77,8 @@ router.put('/:detailsId', (req, res, next) => {
     });
 });
 
-router.delete('/:detailsId', (req, res, next) => {
-    NextOfKin.deleteNextOfKin(req.params.NextOfKinId, function(err, count) {
+router.delete('/:nextOfKinId', (req, res, next) => {
+    NextOfKin.deleteNextOfKin(req.params.nextOfKinId, function(err, count) {
 
         if (err) {
             const response = {"_meta": {"status_code": 417, "message": err}};
