@@ -38,7 +38,7 @@ router.post('/', (req, res, next) => {
     });
 });
 
-router.get('/:detailsId', (req, res, next) => {
+router.get('/:loanId', (req, res, next) => {
 
     // if(req.params.userId) {
 
@@ -59,7 +59,7 @@ router.get('/:detailsId', (req, res, next) => {
     
 });
 
-router.put('/:detailsId', (req, res, next) => {
+router.put('/:loanId', (req, res, next) => {
     Account.updateLoanDetails(req.params.loanId, req.body, function(err, rows){
         if (err) {
             const response = {"_meta":{"status_code": 417, "message": err}};
@@ -77,7 +77,7 @@ router.put('/:detailsId', (req, res, next) => {
     });
 });
 
-router.delete('/:detailsId', (req, res, next) => {
+router.delete('/:loanId', (req, res, next) => {
     Account.deleteLoanDetails(req.params.loanId, function(err, count) {
 
         if (err) {
