@@ -42,7 +42,7 @@ router.get('/:detailsId', (req, res, next) => {
 
     // if(req.params.userId) {
 
-        EmployerDetails.getEmployerDetailsByid(req.params.refreeId, function(err, rows){
+        EmployerDetails.getEmployerDetailsByid(req.params.detailsId, function(err, rows){
         if(err) {
             const response = {"_meta": {"status_code":404, "message": err}};
 
@@ -60,7 +60,7 @@ router.get('/:detailsId', (req, res, next) => {
 });
 
 router.put('/:detailsId', (req, res, next) => {
-    EmployerDetails.updateEmployerDetails(req.params.NextOfKinId, req.body, function(err, rows){
+    EmployerDetails.updateEmployerDetails(req.params.detailsId, req.body, function(err, rows){
         if (err) {
             const response = {"_meta":{"status_code": 417, "message": err}};
 
@@ -78,7 +78,7 @@ router.put('/:detailsId', (req, res, next) => {
 });
 
 router.delete('/:detailsId', (req, res, next) => {
-    EmployerDetails.deleteEmployerDetails(req.params.NextOfKinId, function(err, count) {
+    EmployerDetails.deleteEmployerDetails(req.params.detailsId, function(err, count) {
 
         if (err) {
             const response = {"_meta": {"status_code": 417, "message": err}};
