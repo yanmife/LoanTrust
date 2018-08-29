@@ -6,7 +6,7 @@ const UserDetails = {
     },
 
     getUsersDetailByid: function(id, callback) {
-        db.query("SELECT * FROM userdetails LEFT JOIN user ON userdetails.user = user.user_id WHERE userdetail.user = ?", [id], callback);
+        db.query("SELECT * FROM userdetails LEFT JOIN user ON userdetails.user = user.user_id WHERE userdetails.user = ?", [id], callback);
         
     },
 
